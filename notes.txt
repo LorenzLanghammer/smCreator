@@ -1,0 +1,151 @@
+ -working:
+ 
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+ Locale: de-DE,en-US
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Courier New', 'Helvetica', 'Roboto', 'Arial', 'Times New Roman', 'Verdana', 'Lucida Sans Unicode', 'Cambria']
+ Window: (1366, 1080)
+
+-working:
+
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Lucida Sans Unicode', 'Noto Sans', 'Calibri', 'Arial', 'Roboto', 'Courier New', 'Impact', 'Times New Roman']
+ Window: (1600, 1080)
+
+-not working:
+
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0
+ Locale: de-DE,en-US
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Verdana', 'Segoe UI Emoji', 'Impact', 'Georgia', 'Times New Roman', 'Roboto', 'Courier New', 'Trebuchet MS']
+ Window: (1920, 900)
+
+ -working: 
+
+  UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Helvetica', 'Roboto', 'Times New Roman', 'Candara', 'Georgia', 'Cambria', 'Palatino Linotype', 'Calibri']
+ Window: (1600, 1050)
+
+-working:
+
+UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Georgia', 'Roboto', 'Verdana', 'Calibri', 'Consolas', 'Impact', 'Helvetica', 'Palatino Linotype']
+ Window: (1366, 1080)
+
+
+ -not working: 
+
+  UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Segoe UI', 'Calibri', 'Palatino Linotype', 'Segoe UI Emoji', 'Roboto', 'Tahoma', 'Times New Roman', 'Lucida Sans Unicode']
+ Window: (1920, 900)
+
+ -working:
+
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Calibri', 'Arial', 'Georgia', 'Cambria', 'Trebuchet MS', 'Courier New', 'Noto Sans', 'Times New Roman']
+ Window: (1366, 1050)
+
+ -not working: 
+
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Cambria', 'Impact', 'Courier New', 'Arial', 'Georgia', 'Tahoma', 'Consolas', 'Roboto']
+ Window: (1366, 900)
+
+ -working:
+
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Verdana', 'Impact', 'Times New Roman', 'Helvetica', 'Tahoma', 'Georgia', 'Candara', 'Cambria']
+ Window: (1366, 900)
+
+ -not working: 
+
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0
+ Locale: de-DE,en-US
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Noto Sans', 'Arial', 'Roboto', 'Trebuchet MS', 'Helvetica', 'Palatino Linotype', 'Georgia', 'Segoe UI']
+ Window: (1366, 900)
+
+ -working:
+
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Tahoma', 'Trebuchet MS', 'Calibri', 'Arial', 'Impact', 'Segoe UI', 'Segoe UI Emoji', 'Georgia']
+ Window: (1920, 1050)
+
+ -workgin: 
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+ Locale: de-DE,en-US
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Lucida Sans Unicode', 'Verdana', 'Courier New', 'Palatino Linotype', 'Helvetica', 'Tahoma', 'Calibri', 'Times New Roman']
+ Window: (1920, 900)
+
+ -working: 
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Impact', 'Courier New', 'Lucida Sans Unicode', 'Arial', 'Calibri', 'Trebuchet MS', 'Candara', 'Segoe UI Emoji']
+ Window: (1920, 1050)
+
+ -working:
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Times New Roman', 'Segoe UI', 'Consolas', 'Impact', 'Cambria', 'Noto Sans', 'Palatino Linotype', 'Tahoma']
+ Window: (1366, 900)
+
+ -workgin:
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Arial', 'Calibri', 'Lucida Sans Unicode', 'Georgia', 'Segoe UI', 'Trebuchet MS', 'Times New Roman', 'Candara']
+ Window: (1600, 1050)
+
+ -working:
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+ Locale: de-DE,en-US
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Segoe UI Emoji', 'Calibri', 'Roboto', 'Georgia', 'Helvetica', 'Impact', 'Cambria', 'Palatino Linotype']
+ Window: (1920, 1050)
+
+ -working:
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+ Locale: de-DE,en-US
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Arial', 'Helvetica', 'Impact', 'Courier New', 'Consolas', 'Segoe UI Emoji', 'Times New Roman', 'Segoe UI']
+ Window: (1366, 1050)
+
+ -working:
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+ Locale: de-DE
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Segoe UI', 'Palatino Linotype', 'Noto Sans', 'Georgia', 'Trebuchet MS', 'Candara', 'Lucida Sans Unicode', 'Courier New']
+ Window: (1600, 1050)
+
+ -working:
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0
+ Locale: de-DE,en-US
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Calibri', 'Times New Roman', 'Impact', 'Palatino Linotype', 'Helvetica', 'Courier New', 'Noto Sans', 'Segoe UI']
+ Window: (1600, 900)
+
+ -not working:
+ UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0
+ Locale: de-DE,en-US
+ Accept-Language: de-DE,de;q=0.9
+ Fonts: ['Segoe UI', 'Candara', 'Courier New', 'Arial', 'Consolas', 'Lucida Sans Unicode', 'Palatino Linotype', 'Calibri']
+ Window: (1366, 1080)
