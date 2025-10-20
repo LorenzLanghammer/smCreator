@@ -4,25 +4,6 @@ import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
 db_path = os.path.join(script_dir, "db.db")  # adjust if needed
 
-def addProfile(username, password, country):
-    """Create a database connection to the SQLite database specified by db_file."""
-    conn = None
-    try:
-        conn = sqlite3.connect(db_path)
-    except sqlite3.Error as e:
-        print(f"Error connecting to database: {e}")
-
-    cursor = conn.cursor()
-    print("inserting name: ")
-    print(username)
-    cursor.execute("INSERT INTO Profiles (username, password, country) VALUES (?, ?, ?)", (username, password, country))
-    conn.commit()
-    print("Profile added successfully.")
-
-    cursor.close()
-    conn.close()
-
-
 
 
 def get_email_ig_without_ap():
@@ -127,28 +108,9 @@ def set_tt_used_gmx(profile_id):
     conn.close()
 
 
-def get_email_fb():
-    conn = None
-    try:
-        conn = sqlite3.connect(db_path)
-    except sqlite3.Error as e:
-        print(f"Error connecting to database: {e}")
-    
-    cursor = conn.cursor()
-    cursor.execute("SELECT * from Profiles where fb_used = 0 AND app_password is NULL Limit 1")
-    row = cursor.fetchone()
-
-    if row:
-        id = row[0]
-        return (row[0], row[1], row[2])
-    else:
-        print("No matching row found.")
-
-    conn.close()
 
 
-
-def copy_to_database_gmail_ig(filename):
+def copy_to_database_gmail(filename):
     accounts_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "accounts/ig_accounts.txt")
     conn = None
     try:
@@ -175,7 +137,7 @@ def copy_to_database_gmail_ig(filename):
     conn.close()
 
 
-def copy_to_database_gmx_ig(filename):
+def copy_to_database_gmx(filename):
     accounts_path = os.path.join((os.path.dirname(os.path.dirname(__file__))), "accounts/gmx_accounts.txt")
     conn = None
     try:
@@ -240,7 +202,7 @@ def add_instagram_account(username, password, email, two_fa):
     conn.close()
 
 
-def add_tiktok_account(username, password, email):
+def add_tiktok_account(username, password, email, sessionid_ss, sessionid, sid_tt, sid_guard, uid_tt, uid_tt_ss, sid_ucp_v1):
     print("adding tiktok account")
     conn = None
     try:
@@ -249,8 +211,8 @@ def add_tiktok_account(username, password, email):
         print(f"Error connecting to database: {e}")
 
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO TiktokProfiles (username, password, email) VALUES (?, ?, ?)", 
-                   (username, password, email))
+    cursor.execute("INSERT INTO TiktokProfiles (username, password, email, sessionid_ss, sessionid, sid_tt, sid_guard, uid_tt, uid_tt_ss, sid_ucp_v1) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", 
+                   (username, password, email, sessionid_ss, sessionid, sid_tt, sid_guard, uid_tt, uid_tt_ss, sid_ucp_v1))
     conn.commit()
     print("Tiktok account added successfully.")
 
@@ -288,4 +250,4 @@ def get_gmx_by_id(id):
 
 #get_all_gmx()
 #get_gmx_ig()
-#copy_to_database_gmx_ig("gmx_accounts.txt")
+#copy_to_database_gmx("gmx_accounts.txt")

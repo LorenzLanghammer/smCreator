@@ -174,8 +174,6 @@ class GmxInstaImapInterface(EmailInterface):
 
 class GmxTiktokImapInterface(EmailInterface):
     async def getCode(self, email, password):
-        #EMAIL = self.email
-        #PASSWORD = self.password
 
         try:
             mail = imaplib.IMAP4_SSL("imap.gmx.com")
@@ -219,14 +217,14 @@ class GmxTiktokImapInterface(EmailInterface):
         return code
 
 
-gmxtiktok = GmxTiktokImapInterface("robertktd-brickles@gmx.com", "m7q1S84dg2x")
-asyncio.run(gmxtiktok.getCodeById(578))
+gmxtiktok = GmxTiktokImapInterface("jeralduvc_kooken@gmx.com", "tsVFdhiL5")
+asyncio.run(gmxtiktok.getCodeById(705))
 
 def get_content():
 
     IMAP_SERVER = "imap.gmx.com"
-    EMAIL_ACCOUNT = "dunnkevin1572@gmx.com"
-    PASSWORD = "cqayrm0MX"
+    EMAIL_ACCOUNT = "darellhkwg.caverley@gmx.com"
+    PASSWORD = "IEV47l6IO0"
 
     mail = imaplib.IMAP4_SSL(IMAP_SERVER)
     mail.login(EMAIL_ACCOUNT, PASSWORD)

@@ -50,7 +50,7 @@ COMMON_WINDOWS = [
 ]
 
 COUNTRIES = [
-    #"GERMANY",
+    "GERMANY",
     #"POLAND",
     #"SPAIN",
     #"GREECE",
@@ -62,7 +62,7 @@ COUNTRIES = [
     #"ROMANIA",
     #"CZECH",
     #"HUNGARY",
-    "FINLAND"
+    #"FINLAND"
 ]
 
 
@@ -113,7 +113,7 @@ async def main():
         }
     ) as browser:
         page = await browser.new_page()
-        await page.goto("https://camoufox.com/tests/canvas")
+        await page.goto("https://tiktok.com/login")
         
         try:
             while True:

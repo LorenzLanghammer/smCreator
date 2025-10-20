@@ -168,6 +168,9 @@ async def main():
         return
 
 
+
+
+'''
 def run_main():
     asyncio.run(main())
 
@@ -177,4 +180,14 @@ if __name__ == "__main__":
         p.start()
         p.join()
         print("Browser closed. Restarting...")
+'''
 
+
+
+async def main_loop():
+    while True:
+        await main()
+        print("Browser closed. Restarting...")
+        
+if __name__ == "__main__":
+    asyncio.run(main_loop())
