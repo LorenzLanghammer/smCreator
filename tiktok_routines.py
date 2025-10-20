@@ -122,7 +122,8 @@ class EnterDetailsRoutine(Routine):
 
         random_position = ScreenPosition(random.randint(490, 750), random.randint(300, 560))
         moveToPoint(random_position.x, random_position.y, 2)
-        pag.click()
+
+        start_url = self.page.url
 
         code_button_position = await get_position_by_text(CountryCodeButton[self.country].value, self.page)
         moveToPoint(code_button_position.x, code_button_position.y + 10, 2)
@@ -150,6 +151,10 @@ class EnterDetailsRoutine(Routine):
                 break
 
         set_tt_used_gmx(self.email[0])
+
+        while(self.page.url == start_url):
+            await asyncio.sleep(1)
+        
         return True
         #next_button_position = await get_position_by_text(CountryNextButton[self.country].value, self.tab)
         #moveToPoint(next_button_position.x, next_button_position.y, 2)
@@ -199,5 +204,33 @@ class AddProfileRoutine(Routine):
         self.email = email
 
     async def executeRoutine(self):
-        add_tiktok_account(self.username, self.password, self.email[0])
+        cookie_names = ['sessionid_ss', 'sessionid', 'sid_tt', 'sid_guard', 'uid_tt', 'uid_tt_ss', 'sid_ucp_v1']
+        cookies = await self.page.context.cookies(urls=["https://www.tiktok.com"])
+        tt_cookies = [""] * 7
+
+        for cookie in cookies:
+            if (cookie['name'] == 'sessionid_ss'):
+                tt_cookies[0] = cookie['value']
+            if (cookie['name'] == 'sessionid'):
+                tt_cookies[1] = cookie['value']
+            if (cookie['name'] == 'sid_tt'):
+                tt_cookies[2] = cookie['value']
+            if (cookie['name'] == 'sid_guard'):
+                tt_cookies[3] = cookie['value']
+            if (cookie['name'] == 'uid_tt'):
+                tt_cookies[4] = cookie['value']
+            if (cookie['name'] == 'uid_tt_ss'):
+                tt_cookies[5] = cookie['value']
+            if (cookie['name'] == 'sid_ucp_v1'):
+                tt_cookies[6] = cookie['value']
+
+
+        '''
+        for cookie in tt_cookies:
+            print(cookie)
+        '''
+        
+
+        add_tiktok_account(self.username, self.password, self.email[0], tt_cookies[0], tt_cookies[1], tt_cookies[2], tt_cookies[3], tt_cookies[4], tt_cookies[5], tt_cookies[6])
+
         return False

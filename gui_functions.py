@@ -129,7 +129,7 @@ def moveToPoint(dest_x, dest_y, speed):
             v_clip = M_0/2 + np.random.random()*M_0/2
             v_x = (v_x/v_mag) * v_clip
             v_y = (v_y/v_mag) * v_clip
-        dynamic_speed = speed * min(1.0, dist / D_0)  # D_0 is your decay threshold
+        dynamic_speed = speed * min(1.0, dist / D_0) 
         start_x += dynamic_speed*v_x
         start_y += dynamic_speed*v_y
         move_x = int(np.round(start_x))

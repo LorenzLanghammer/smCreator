@@ -54,7 +54,7 @@ def generate_password(length=12):
     lowercase = string.ascii_lowercase
     uppercase = string.ascii_uppercase
     digits = string.digits
-    punctuation = ".,!?;:-_"
+    punctuation = ".,!?;-_"
 
     # Make sure to include at least one from each group
     password = [

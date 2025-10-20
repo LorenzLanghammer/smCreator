@@ -47,6 +47,7 @@ class RayobyteProxy(Proxy):
     
     def getPassword(self):
         proxy_string = f"4R7rhACgPhG6udy-session-{generate_session_string()}-country-{CountryProxy[self.country].value.upper()}"
+        
         #proxy_string = f"4R7rhACgPhG6udy-country-{CountryProxy[self.country].value.upper()}"
         #if self.region:
             #proxy_string +=  f"-region-{self.region}"

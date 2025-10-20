@@ -43,8 +43,6 @@ class CountryCodeButton(Enum):
     FINLAND = "Lähetä koodi"
 
 
-
-
 class CountryNextButton(Enum):
     GERMANY = "Weiter"
     POLAND = "Dalej"
@@ -264,14 +262,14 @@ class CountryFonts(Enum):
         "Comic Sans MS", "Segoe Print", "Segoe Script", "Arial Unicode MS"
     ]
     FINLAND = [
-    "Arial", "Calibri", "Cambria", "Candara", "Consolas", "Courier New",
-    "Georgia", "Helvetica", "Impact", "Lucida Sans Unicode", "Palatino Linotype",
-    "Segoe UI", "Tahoma", "Times New Roman", "Trebuchet MS", "Verdana",
-    "Roboto", "Noto Sans", "Segoe UI Emoji", "Corbel", "Constantia",
-    "Ebrima", "Leelawadee UI", "Malgun Gothic", "Yu Gothic UI", "Meiryo UI",
-    "Comic Sans MS", "Book Antiqua", "Century Gothic", "Franklin Gothic Medium",
-    "Gill Sans MT", "Calibri Light", "Nirmala UI", "Segoe Print", "Segoe Script"
-]
+        "Arial", "Calibri", "Cambria", "Candara", "Consolas", "Courier New",
+        "Georgia", "Helvetica", "Impact", "Lucida Sans Unicode", "Palatino Linotype",
+        "Segoe UI", "Tahoma", "Times New Roman", "Trebuchet MS", "Verdana",
+        "Roboto", "Noto Sans", "Segoe UI Emoji", "Corbel", "Constantia",
+        "Ebrima", "Leelawadee UI", "Malgun Gothic", "Yu Gothic UI", "Meiryo UI",
+        "Comic Sans MS", "Book Antiqua", "Century Gothic", "Franklin Gothic Medium",
+        "Gill Sans MT", "Calibri Light", "Nirmala UI", "Segoe Print", "Segoe Script"
+    ]
 
 
 
