@@ -202,12 +202,19 @@ class AddProfileRoutine(Routine):
         self.username = username
         self.password = password
         self.email = email
+        self.country = country
 
     async def executeRoutine(self):
-        cookie_names = ['sessionid_ss', 'sessionid', 'sid_tt', 'sid_guard', 'uid_tt', 'uid_tt_ss', 'sid_ucp_v1']
         cookies = await self.page.context.cookies(urls=["https://www.tiktok.com"])
-        tt_cookies = [""] * 7
 
+        cookies_str = ""
+        for cookie in cookies:
+            print("found cookie")
+            print(cookie['name'])
+            print(cookie['value'])
+            cookies_str = cookies_str + cookie['name'] + "=" + cookie['value'] + "; "
+
+        '''
         for cookie in cookies:
             if (cookie['name'] == 'sessionid_ss'):
                 tt_cookies[0] = cookie['value']
@@ -223,14 +230,15 @@ class AddProfileRoutine(Routine):
                 tt_cookies[5] = cookie['value']
             if (cookie['name'] == 'sid_ucp_v1'):
                 tt_cookies[6] = cookie['value']
-
-
+        '''
         '''
         for cookie in tt_cookies:
             print(cookie)
         '''
-        
 
-        add_tiktok_account(self.username, self.password, self.email[0], tt_cookies[0], tt_cookies[1], tt_cookies[2], tt_cookies[3], tt_cookies[4], tt_cookies[5], tt_cookies[6])
+
+        print("the full cookie string: ")
+        print(cookies_str)
+        add_tiktok_account(self.username, self.password, self.email[0], cookies_str, self.country)
 
         return False

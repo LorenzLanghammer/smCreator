@@ -133,7 +133,6 @@ async def main():
         await page.goto("https://tiktok.com/signup")
 
 
-
         current_url = page.url
         restart = False
 
@@ -164,23 +163,7 @@ async def main():
                 await page.close()
                 break
 
-
         return
-
-
-
-
-'''
-def run_main():
-    asyncio.run(main())
-
-if __name__ == "__main__":
-    while True:
-        p = multiprocessing.Process(target=run_main)
-        p.start()
-        p.join()
-        print("Browser closed. Restarting...")
-'''
 
 
 

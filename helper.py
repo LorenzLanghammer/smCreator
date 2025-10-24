@@ -38,7 +38,6 @@ def generateName():
                 return firstName, lastName, gender
 
 
-
 def generateEmail(firstName, lastName, count):
     count += 1
     lastName_noSpaces = lastName.replace(" ", "")
@@ -56,7 +55,6 @@ def generate_password(length=12):
     digits = string.digits
     punctuation = ".,!?;-_"
 
-    # Make sure to include at least one from each group
     password = [
         random.choice(lowercase),
         random.choice(uppercase),
@@ -73,7 +71,7 @@ def generate_password(length=12):
 
 def generate_session_string(length=8):
 
-    characters = string.ascii_letters + '123456789'  # Excludes '0'
+    characters = string.ascii_letters + '123456789'
     return ''.join(random.choices(characters, k=length))    
 
 '''
@@ -110,6 +108,22 @@ async def wait_for_url(page, original_url, timeout=30):
         await asyncio.sleep(0.1)
 
 
+def parse_cookie_string(cookie_string, domain=".tiktok.com"):
+    cookies = []
+    for part in cookie_string.split("; "):
+        if "=" in part:
+            name, value = part.split("=", 1)
+            cookies.append({
+                "name": name.strip(),
+                "value": value.strip(),
+                "domain": domain,
+                "path": "/"
+            })
+    return cookies
+
+
+
+
 
 async def clear_cookies_except(tab, keep_domain):
     await tab.send(zd.cdp.network.enable())
@@ -125,9 +139,6 @@ async def clear_cookies_except(tab, keep_domain):
                 domain=cookie["domain"],
                 path=cookie["path"]
             ))
-
-#asyncio.run(getPhoneNumber())
-
 
 
 def get_otp_code(secret_key):
